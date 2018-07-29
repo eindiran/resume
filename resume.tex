@@ -53,7 +53,7 @@
 }
 
 \newcommand{\ressubheading}[4]{
-    \begin{tabular*}{6.5in}{
+    \begin{tabular*}{7in}{
         l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		    \textbf{#1} & #2 \\
 		    \textit{#3} & #4 \\
@@ -82,23 +82,29 @@ San Francisco, CA 94109 & (805) 651-9333 \\
 
 \resheading{Work Experience}
 
-\iffalse
 \ressubheading{Computational Linguist at Promptu Systems}{Menlo Park, California}{Promptu Systems Corporation}{October 2015 - present}
 \begin{itemize}
-    \resitem{Test item}
+    \resitem{Worked on speech recognition projects in English, Italian, German, and Mandarin; both as a software engineer, writing components of the recognizer system, and as a linguist, handling language modeling and writing lexicons and grammars. This included crafting language model training datasets for automotive, cable, and travel products.}
+    \resitem{Wrote the component of the recognizer system responsible for handling lexicon lookups during entity registration, generating pronunciations wherever possible to avoid needing to perform G2P.}
+    \resitem{Led a project to construct a build system for language models, introducing new types of testing and automating work that was previously done by hand. This project used Jenkins to automatically build and test language model training datasets and language models, substantially reducing the frequency of bugs and regressions in the recognizer related to the LM and keeping over a dozen projects up-to-date while not under active development.}
+    \resitem{Rewrote the piece of software which was the bottleneck in language model construction, reducing LM build times by as much as 20x for some projects.}
+    \iffalse
+    \resitem{Wrote and maintained a fully-featured application for recording speech, designed to be useful for in-office recordings as well as in-car recordings.}
+    \fi
 \end{itemize}
-\fi
 
 \ressubheading{Intern with the Linguistic Society of America Summer Institute}{Chicago, Illinois}{Linguistic Society of America (LSA)}{June 2015 - August 2015}
 \begin{itemize}
 \resitem{Wrote the software responsible for managing grades and credit assignment at the institute, which was used to process class data for hundreds of participants across nearly 100 classes. Aided the directors of the institute in all technical matters.}
+\iffalse
 \resitem{Managed a critical registration site for institute participants.}
+\fi
 \end{itemize}
 
 \iffalse
 \ressubheading{Research Assistant with the Comprehensive Care Program}{Chicago, Illinois}{University of Chicago Hospitals}{May 2014 - January 2015}
 \begin{itemize}
-	\resitem{Managed large amounts of data using Excel, Redcap, and EPIC software; this included handling sensitive data, such as medical records and survey data used for research.}
+	\resitem{Managed large amounts of data using Excel, Redcap, and Epic software; this included handling sensitive data, such as medical records and survey data used for research.}
 	\resitem{Conducted numerous interviews with patients, both over the phone and in clinical settings, such as in the Emergency Room.}
 	\resitem{Trained other research assistants in the practices of data management and patient interaction.}
 \end{itemize}
@@ -127,7 +133,7 @@ San Francisco, CA 94109 & (805) 651-9333 \\
 \resheading{Other Projects}
 
 \begin{itemize}
-    \resitem{Test item}
+    \resitem{Sitrus -- A quantified-self data collection and analysis tool. See: sitrus.io}
 \end{itemize}
 \fi
 
@@ -139,7 +145,7 @@ San Francisco, CA 94109 & (805) 651-9333 \\
 \begin{itemize}
     \resitem{3.44 Cumulative GPA; 3.67 Fourth-Year GPA}
     \resitem{Relevant coursework: Introduction to Programming for Linguistics, the Computer Science with Applications sequence, Statistical Methods and Applications, Mathematical Modelling for Linguistics, Computer Sceince with Applications sequence, and Computational Linguistics.}
-    \resitem{Strong background in Syntax, Phonology, Phonetics, and Morphology.}
+    \resitem{Strong linguistics background in syntax, phonology, phonetics, and morphology.}
 \end{itemize}
 
 \ressubheading{Linguistic Society of America}{Chicago, Illinois}{Summer Institute at the University of Chicago}{2015}
@@ -152,8 +158,13 @@ San Francisco, CA 94109 & (805) 651-9333 \\
 \resheading{Technical Skills}
 
 \begin{itemize}
-    \resitem{Notable areas of knowledge: NLP/machine learning algorithms, statistical modeling, data manipulation, and data scraping. Skilled at cleaning large and messy data sets.}
-    \resitem{Programming Languages: Strong proficiency in Python, proficiency in R. Comfortable with SQL, C, and Java. Proficient with common data-centric Python packages including NumPy, pandas, and SciPy. }
+    \resitem{Have used Java, Python, Perl, and C professionally in production systems. I have built and maintained a large continuous delivery pipeline using Jenkins, scripting with Groovy. Familiar with *nix utilities for system administration tasks, primarily on Linux.}
+    \resitem{Python for scripting, data scraping and manipulation, and backend web-development (using Django), with PostgreSQL and MongoDB.}
+    
+    \iffalse
+    \resitem{Familiar with C++, Javascript, Haskell, Coconut, and Nim.}
+    \fi
+    
 \end{itemize}
 
 %------------------------------------------------------------------------
