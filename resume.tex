@@ -85,39 +85,35 @@ San Francisco, CA 94109 & (805) 651-9333 \\
 \ressubheading{Computational Linguist at Promptu Systems}{Menlo Park, California}{Promptu Systems Corporation}{October 2015 - present}
 \begin{itemize}
     \resitem{Worked on speech recognition projects in English, Italian, German, and Mandarin; both as a software engineer, writing components of the recognizer system, and as a linguist, handling language modeling and writing lexicons and grammars. This included crafting language model training datasets for automotive, cable, and travel products.}
-    \resitem{Wrote the component of the recognizer system responsible for handling lexicon lookups during entity registration, generating pronunciations wherever possible to avoid needing to perform G2P.}
+    \resitem{Wrote the component of the recognizer system called pre-G2P, responsible for handling lexicon lookups during entity registration, generating pronunciations wherever possible to avoid needing to perform G2P on out-of-vocab entries.}
     \resitem{Led a project to construct a build system for language models, introducing new types of testing and automating work that was previously done by hand. This project used Jenkins to automatically build and test language model training datasets and language models, substantially reducing the frequency of bugs and regressions in the recognizer related to the LM and keeping over a dozen projects up-to-date while not under active development.}
-    \resitem{Rewrote the piece of software which was the bottleneck in language model construction, reducing LM build times by as much as 20x for some projects.}
-    \iffalse
-    \resitem{Wrote and maintained a fully-featured application for recording speech, designed to be useful for in-office recordings as well as in-car recordings.}
-    \fi
+    \resitem{Wrote and maintained a large number of developer tools for use in team; most notably I wrote a fully-featured Java application for recording speech. The recording app needed a lot of special features, so I designed, wrote and tested it entirely from scratch (using the Java Sound API). The app was designed to be useful for recording scripts of phrases, either in a car or in-office.}
+    \resitem{Got experience refactoring large, old codebases in C, Perl, Python 2/3 and Java.}
+    \resitem{Led a project to speed up the construction on language models. Rewrote the piece of software which was the bottleneck, reducing LM build times by as much as 20x for some datasets. Further decreased the build time of the LMTD by parallelizing the whole process, reducing build times by hours per day.}
+    \resitem{Drafted a proposal for changing the build process of a major software component which allowed a substantial number of developer hours to be saved each time a new Acoustic scorer was built, saving upwards of several man-weeks per year.}
 \end{itemize}
 
 \ressubheading{Intern with the Linguistic Society of America Summer Institute}{Chicago, Illinois}{Linguistic Society of America (LSA)}{June 2015 - August 2015}
 \begin{itemize}
-\resitem{Wrote the software responsible for managing grades and credit assignment at the institute, which was used to process class data for hundreds of participants across nearly 100 classes. Aided the directors of the institute in all technical matters.}
-\iffalse
-\resitem{Managed a critical registration site for institute participants.}
-\fi
+	\resitem{Wrote the software responsible for managing grades and credit assignment at the institute, which was used to process class data for hundreds of participants across nearly 100 classes.} 
+	\resitem{Aided the directors of the institute in all technical matters; led tech support during registration.}
+	\resitem{Managed a critical registration site for institute participants, ensuring that technical problems did not lead to issues for participants checking in.}
 \end{itemize}
 
-\iffalse
 \ressubheading{Research Assistant with the Comprehensive Care Program}{Chicago, Illinois}{University of Chicago Hospitals}{May 2014 - January 2015}
 \begin{itemize}
 	\resitem{Managed large amounts of data using Excel, Redcap, and Epic software; this included handling sensitive data, such as medical records and survey data used for research.}
-	\resitem{Conducted numerous interviews with patients, both over the phone and in clinical settings, such as in the Emergency Room.}
-	\resitem{Trained other research assistants in the practices of data management and patient interaction.}
+	\resitem{Conducted hundreds of patient interviews, both over the phone and in clinical settings. The patients were often combative and aggressively did not want to take the required surveys, so this required me to get very good at diffusing customer anger.}
+	\resitem{Was responsible for training other research assistants how to do patient interaction as well as data management and cleanup.}
 \end{itemize}
-\fi
 
-\iffalse
 \ressubheading{Assistant Director of Strategy for CAM Creative}{Chicago, Illinois}{The Chicago Academy of Music}{June 2013 - January 2014}
 \begin{itemize}
 	\resitem{Co-founded a project working to build mobile medical clinics which would provide cost-free medical care to neighborhoods with poor access to doctors throughout Chicago.}
 	\resitem{Worked closely with small-business owners and community organizers in Woodlawn to foster community outreach programs and in Hyde Park in order to secure a building for the school.}
 	\resitem{Wrote grant and funding proposals for the organization, as well as managing project reports and project budgets.}
+	\resitem{Designed the logo, menu, and decor at a restauraunt and helped launch it. The restaurant is now one of the premier locations in Hyde Park for baked goods.}
 \end{itemize}
-\fi
 
 \iffalse
 \item \ressubheading{Volunteer Internship with The Red Shirt Program}{Oxnard, California}{St. John's Regional Medical Center}{October 2009 - June 2011}
@@ -129,13 +125,18 @@ San Francisco, CA 94109 & (805) 651-9333 \\
 
 %------------------------------------------------------------------------
 
-\iffalse
-\resheading{Other Projects}
+\resheading{Personal Projects}
 
 \begin{itemize}
     \resitem{Sitrus -- A quantified-self data collection and analysis tool. See: sitrus.io}
+    	\resitem{Lead Sitrus through Y Combinator's 2018 Startup School, which we graduated from in November 2018.}
+	\resitem{While in SS 2018, my group of 20 - 30 comapnies elected me as group moderator; during the course I was responsible for organizing all of the tasks, meetings, homework and discussions for all companies in our section. Due to my diligence in herding everyone to show up and participate, our group had an abnormally high rate of graduation and an abnormally high rate of receiving funding.}
+    \resitem{Frequent contributor to Open Source projects, including the Coconut Programming Language and related tooling.}
+        \resitem{Run a small personal website for hosting projects and posts.}
+    \resitem{AutoWater and AudoFeeder -- A project to automate watering houseplants and a project to automate feeding fish respectively. Electronics + Arduino programming.}
+    \resitem{orgmode-to-anki -- Automatically convert notes taken using emacs orgmode, ie from the note taking app Orgzly, into Anki flash cards. Very useful for always automatically moving vocab in your notes onto flashcards.}
+    \resitem{Mancala -- Play mancala in the terminal against another human or against an AI that uses a min-max algorithm to prune possibilities of the game tree.}
 \end{itemize}
-\fi
 
 %------------------------------------------------------------------------
 
@@ -160,11 +161,7 @@ San Francisco, CA 94109 & (805) 651-9333 \\
 \begin{itemize}
     \resitem{Have used Java, Python, Perl, and C professionally in production systems. I have built and maintained a large continuous delivery pipeline using Jenkins, scripting with Groovy. Familiar with *nix utilities for system administration tasks, primarily on Linux.}
     \resitem{Python for scripting, data scraping and manipulation, and backend web-development (using Django), with PostgreSQL and MongoDB.}
-    
-    \iffalse
     \resitem{Familiar with C++, Javascript, Haskell, Coconut, and Nim.}
-    \fi
-    
 \end{itemize}
 
 %------------------------------------------------------------------------
