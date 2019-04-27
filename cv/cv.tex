@@ -1,0 +1,191 @@
+\documentclass[letterpaper,10pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+\usepackage{framed,tabularx,array}
+\robustify\cftdotfill
+
+\definecolor{shadecolor}{gray}{0.7} 
+\definecolor{shadecolorB}{gray}{0.93}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+%-----------------------------------------------------------
+
+\newcommand{\resitem}[1]{
+    \item #1 \vspace{-2pt}
+}
+
+\newcommand{\resheading}[1]{
+    \vspace{8pt}
+    \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+        \begin{shaded}
+            \setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{
+                \textbf{
+                    \sffamily{
+                        \mbox{~}\makebox[6.5in][l]{\large #1} \vphantom{
+                            p\^{E}}
+                        }
+                    }
+                }
+            }
+        \end{shaded}
+  }\vspace{-5pt}
+}
+
+\newcommand{\ressubheading}[4]{
+    \begin{tabular*}{7in}{
+        l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		    \textbf{#1} & #2 \\
+		    \textit{#3} & #4 \\
+    \end{tabular*}
+    \vspace{-6pt}}
+    
+\newcommand{\ressubheadingtabx}[4]{
+    \begin{tabularx}{6.5in}{X<{\cftdotfill{\cftsecdotsep}}@{}r}
+        \textbf{#1} & #2 \\
+        \textit{#3} & \textit{#4} \\
+    \end{tabularx}\vspace{-6pt}}
+    
+%-----------------------------------------------------------
+
+\begin{document}
+
+%------------------------------------------------------------------------
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Elliott Indiran} & \textbf{Computational Linguist} \\
+github, linkedin: eindiran & eindiran@uchicago.edu \\
+site: https://eindiran.github.io/ & (805) 651-9333 \\
+
+\end{tabular*}
+
+%------------------------------------------------------------------------
+
+\resheading{Education}
+
+\ressubheading{University of Chicago}{Chicago, Illinois}{Bachelor of the Arts in Linguistics with General Honors}{2011 - 2015}
+\begin{itemize}
+    \resitem{3.44 Cumulative GPA; 3.67 Fourth-Year GPA}
+    \resitem{Relevant coursework: Introduction to Programming for Linguistics, Statistical Methods and Applications, Mathematical Modelling for Linguistics, Computer Science with Applications sequence, Computational Linguistics. Linguistics coursework in all major subfields (syntax, semantics, phonetics, phonology, morphology, psycholinguistics).}
+    \resitem{Background in experimental design, creation and management of linguistic corpora, and analysis of natural language data.}
+\end{itemize}
+
+\ressubheading{Linguistic Society of America}{Chicago, Illinois}{Summer Institute at the University of Chicago}{2015}
+\begin{itemize}
+	\resitem{Relevant coursework: Exploiting Web Data for Linguistic Research, Unsupervised Learning of Linguistic Structure, Advanced Probabilistic Modeling in R, Speech Technologies, Computational Psycholinguistics, Computational Lexical Semantics.}
+\end{itemize}
+
+%------------------------------------------------------------------------
+
+\resheading{Work Experience}
+
+\ressubheading{Computational Linguist at Promptu Systems}{Menlo Park, California}{Promptu Systems Corporation}{October 2015 - present}
+\begin{itemize}
+    \resitem{Worked on speech recognition projects in English, Italian, German, and Mandarin; both as a software engineer, writing components of the recognizer system, and as a linguist, handling language modeling and writing lexicons and grammars. This included constructing language model training datasets products in several significantly different problem domains.}
+    \resitem{Wrote the component of the recognizer system responsible for handling lexicon lookups during entity registration, generating pronunciations wherever possible to avoid needing to perform G2P on out-of-vocab entries. With pre-G2P in place, the number of entities that needed G2P on first registration step dropped drastically, shaving seconds off of the recognizer's start-up latency.}
+    \resitem{Led project on constructing an automated build system for language model training data, using CI techniques to build and test LMTDs, substantially reducing the frequency of bugs and regressions in the recognizer related to the language model and keeping over a dozen projects up-to-date while not under active development.}
+    \resitem{Wrote and maintained a large number of developer tools for use in team; most notably I wrote a fully-featured Java application for recording speech. The recording app needed a lot of special features, so I designed, wrote and tested it entirely from scratch (using the Java Sound API). The app was designed to be useful for recording scripts of phrases, either in a car or in-office.}
+    \resitem{Experience maintaining and refactoring codebases in C, Perl, Python and Java.}
+    \resitem{Led a project to speed up the construction on language models. Rewrote the piece of software which was the bottleneck, reducing LM build times by as much as 20x for some datasets. Further decreased the build time of the LMTD by parallelizing the whole process, reducing build times by hours per day.}
+    \resitem{Drafted a proposal for changing the build process of a major software component which allowed a substantial number of developer hours to be saved each time a new Acoustic scorer was built, saving upwards of several man-weeks per year.}
+    \resitem{Wrote an Android app used internally for data collection and labeling of audio files.}
+\end{itemize}
+
+\ressubheading{Intern with the Linguistic Society of America Summer Institute}{Chicago, Illinois}{Linguistic Society of America (LSA)}{June 2015 - August 2015}
+\begin{itemize}
+	\resitem{Wrote the software responsible for managing grades and credit assignment at the institute, which was used to process class data for hundreds of participants across nearly 100 classes.} 
+	\resitem{Aided the directors of the institute in all technical matters; led tech support during registration.}
+	\resitem{Managed a critical registration site for institute participants, ensuring that technical problems did not lead to issues for participants checking in.}
+\end{itemize}
+
+\iffalse
+\ressubheading{Research Assistant with the Comprehensive Care Program}{Chicago, Illinois}{University of Chicago Hospitals}{May 2014 - January 2015}
+\begin{itemize}
+	\resitem{Managed large amounts of data using industry-standard software including Excel, Redcap, and Epic; this included handling sensitive data, such as medical records and survey data used for research.}
+	\resitem{Conducted hundreds of patient interviews, both over the phone and in clinical settings. The patients were often combative and aggressively did not want to take the required surveys, so this required me to get very good at diffusing customer anger.}
+	\resitem{Trained other research assistants how to do patient interaction as well as data management and cleanup.}
+\end{itemize}
+
+\ressubheading{Assistant Director of Strategy for CAM Creative}{Chicago, Illinois}{The Chicago Academy of Music}{June 2013 - January 2014}
+\begin{itemize}
+	\resitem{Co-founded a project working to build mobile medical clinics which would provide cost-free medical care to neighborhoods with poor access to doctors throughout Chicago.}
+	\resitem{Worked closely with small-business owners and community organizers in Woodlawn to foster community outreach programs and in Hyde Park in order to secure a building for the school.}
+	\resitem{Wrote grant and funding proposals for the organization, as well as managing project reports and project budgets.}
+	\resitem{Designed the logo, menu, and decor at a restaurant and helped launch it. The restaurant is now one of the premier locations in Hyde Park for baked goods.}
+\end{itemize}
+
+\item \ressubheading{Volunteer Internship with The Red Shirt Program}{Oxnard, California}{St. John's Regional Medical Center}{October 2009 - June 2011}
+\begin{itemize}
+	\resitem{Worked to ensure ongoing patient satisfaction in a variety of clinical environments.}
+	\resitem{Became comfortable dealing with extremely high-pressure work environments in the Emergency room.}
+\end{itemize}
+\fi
+%------------------------------------------------------------------------
+
+\resheading{Projects}
+
+\ressubheading{Sitrus}{team-sitrus.github.io}{2016 - present}{sitrus.io/app/}
+\begin{itemize}
+    \resitem{Co-founded Sitrus with 2 friends, a platform with a number of tools for quantified-self data collection and analysis. We built out the tools with the goal of lowering the barrier-of-entry to experiment with quantified-self.}
+        \resitem{Wrote the Paragon data collection tool, used to capture a user's data through an easy-to-use web interface in React + Django.}
+        \resitem{Wrote the Sitrus query language, used as a frontend for querying and processing data from a relational database. The language can be with Postgres or SQLite, with the interpreter generating PostgreSQL and SQLite queries respectively.}
+        \resitem{Developed a site that synthesizes quantified-self data from a variety of sources, allowing the user to unsilo their data and do data analysis and visualization for all of their data in one place. It includes integrations with a number of other apps including GitHub, Wakatime, RescueTime, Steam, FitBit and more.}
+        \resitem{Designed a variety of data visualizations for the main quantified self dashboard.}
+        \resitem{Wrote a database abstraction layer that allowed the backend to swap databases painlessly, supporting SQLite, Postgres, and MongoDB.}
+    	\resitem{Led Sitrus through Y Combinator's 2018 Startup School, graduating in November 2018. Elected as moderator of our group of 15 companies. Organized all tasks, meetings, homework, and discussions for our section.}
+    	\resitem{Developed the Sitrus Moods application for Android and iOS in React Native, available in the App Store and the Play Store.}
+\end{itemize}
+
+\ressubheading{Programming Language Projects}{More Info:}{2017 - present}{github.com/eindiran}
+\begin{itemize}
+    \resitem{Frequent contributor to a few Open Source projects, including the Coconut Programming Language and related tooling. Wrote large sections of the Coconut tutorial and the main Coconut documentation.}
+    \resitem{pyknitout: A Python package that adds support for Knitout, a format for providing algorithmic knitting instructions to mechanical looms/knitting machines, to Python, allowing you to create Knitout files using very high level Python code.}
+    \resitem{uforth: A small bootstrapping Forth system with a base written in x86-64 assembly and the nasm assembler.}
+    \resitem{urbane: A brainf*ck interpreter written in C, with support for other brainf*ck-based languages including reversef*ck, wepmlrio, ???, f*ckbees, and P".}
+\end{itemize}
+
+\ressubheading{Other Projects}{More Info:}{2017 - present}{github.com/eindiran}
+\begin{itemize}
+    \resitem{AutoWater: a project to automate watering your houseplants using Arduino.}
+    \resitem{orgmode-to-anki: automatically convert orgmode files into Anki flashcards. Useful for automating the generation of flashcards from Orgzly or emacs notes.}
+    \resitem{Mancala: play mancala in the terminal against another human or against an AI that uses a min-max algorithm to prune possibilities of the game tree.}
+    \resitem{interject: View and edit text in shell pipes while they run.}
+    \resitem{libperceptron: A lean, zero-dependency library for implementing fast perceptrons in C.}
+\end{itemize}
+
+
+%------------------------------------------------------------------------
+
+\resheading{Technical Skills}
+
+\begin{itemize}
+    \resitem{Have used Java, Python, and C professionally in production systems. I have built and maintained a large continuous delivery pipeline using Jenkins, scripting with Groovy. Familiar with *nix utilities for system administration tasks, on Linux and OS-X.}
+    \resitem{Python for scripting, data scraping and manipulation, and backend web-development (using Django).}
+    \resitem{Databases: SQLite, PostgreSQL, MongoDB.}
+    \resitem{App Development: Android (mobile), React Native (mobile), and Java (desktop).}
+    \resitem{Familiarity reading: Javascript, C++, Perl.}
+\end{itemize}
+
+%------------------------------------------------------------------------
+
+\end{document}
